@@ -15,10 +15,11 @@ public class Factura {
        nombre=objTeclado.nextLine();
        System.out.println("ingrese el precio del producto");
        precio=objTeclado.nextInt();
+       Factura.imprimir(nombre,precio);
        
     }
     
-    public void imprimir(){
+    public static void imprimir(String nombre,int precio){
         System.out.println("nombre producto:"+nombre);
         System.out.println("precio producto:"+precio);
     }

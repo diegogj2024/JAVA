@@ -4,18 +4,20 @@
  */
 package javaejercicios;
 
-/**
- *
- * @author SENA
- */
+import java.util.Scanner;
+
 public class Principal {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-       Factura objFactura=new Factura();
-       objFactura.imprimir();
+       Scanner objleer=new Scanner(System.in);
+       System.out.println("ingrese el numero del ejercicio que desee probar rango(1 a 20)");
+       int opcion=objleer.nextInt();
+       switch(opcion){
+           case 1: 
+               Factura objFactura=new Factura();
+           default:
+               System.out.println("este ejercicio no existe");
+       }
     }
     
 }
