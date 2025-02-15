@@ -15,8 +15,6 @@ public class Principal {
        switch(opcion){
            case 1: 
                Factura objFactura=new Factura();
-           default:
-               System.out.println("este ejercicio no existe");
        }
     }
     
