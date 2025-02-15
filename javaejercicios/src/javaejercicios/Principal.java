@@ -15,6 +15,16 @@ public class Principal {
        switch(opcion){
            case 1: 
                Factura objFactura=new Factura();
+               break;
+               
+           case 2:
+               Ascensor objascensor=new Ascensor();
+               break;
+           case 3:
+               Ascensorkg objascensorkg=new Ascensorkg();
+               break;
+           default:
+               System.out.println("esta opcion no existe");
        }
     }
     
