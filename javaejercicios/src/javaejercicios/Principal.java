@@ -23,6 +23,12 @@ public class Principal {
            case 3:
                Ascensorkg objascensorkg=new Ascensorkg();
                break;
+           case 4:
+               Temperatura objtemperatura=new Temperatura();
+               break;
+           case 5:
+               Umbral objumbral=new Umbral();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }
