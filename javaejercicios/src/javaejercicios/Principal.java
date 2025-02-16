@@ -29,6 +29,9 @@ public class Principal {
            case 5:
                Umbral objumbral=new Umbral();
                break;
+           case 6:
+               Ascensorandtemperatura objascensort=new Ascensorandtemperatura();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }
