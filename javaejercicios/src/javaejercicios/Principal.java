@@ -32,6 +32,9 @@ public class Principal {
            case 6:
                Ascensorandtemperatura objascensort=new Ascensorandtemperatura();
                break;
+           case 7:
+               Tienda objTienda=new Tienda();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }
