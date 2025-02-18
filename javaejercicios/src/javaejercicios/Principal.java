@@ -47,6 +47,8 @@ public class Principal {
            case 11:
                Menu objmenu=new Menu();
                break;
+           case 12:
+               Cajero objcajero=new Cajero();
            default:
                System.out.println("esta opcion no existe");
        }
