@@ -35,6 +35,18 @@ public class Principal {
            case 7:
                Tienda objTienda=new Tienda();
                break;
+           case 8:
+               Imc objimc=new Imc();
+               break;
+           case 9:
+               Cine objcine=new Cine();
+               break;
+           case 10:
+               Futbol objfutbol=new Futbol();
+               break;
+           case 11:
+               Menu objmenu=new Menu();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }

@@ -15,8 +15,15 @@ public class Tienda {
         Scanner objTeclado= new Scanner(System.in);
         System.out.println("ingrese el tipo de producto (A,V o E");
         String tipo= objTeclado.nextLine();
-        System.out.println("ingrese la cantidad de productos");
-        int cantidad=objTeclado.nextInt();
+        int cantidad; 
+        do {
+           System.out.println("Ingrese la cantidad de productos");
+           cantidad = objTeclado.nextInt();
+           if (cantidad<=0){
+               System.out.println("el numero es menor a 0");
+           }
+        } while (cantidad <= 0);
+        
         Tienda.procesar(tipo,cantidad);
     }
     
