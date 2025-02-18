@@ -50,6 +50,18 @@ public class Principal {
            case 12:
                Cajero objcajero=new Cajero();
                break;
+           case 13:
+               Tiendaonline objTiendaonline=new Tiendaonline();
+               break;
+           case 14:
+               Impresora objimpresora=new Impresora();
+               break;
+           case 15:
+               Viajeencoche objviajeencoche=new Viajeencoche();
+               break;
+           case 16:
+               Cuentaregresiva objcuenta=new Cuentaregresiva();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }

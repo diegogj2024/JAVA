@@ -1,57 +1,57 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package javaejercicios;
 
 import java.util.Scanner;
 
 public class Cajero {
-    static int saldo=1000000;
-    static int clave=6969;
-    static Scanner objleer=new Scanner(System.in);
-    public Cajero(){
-        System.out.println("ingrese su tarjeta");
+    static int saldo = 1000000;
+    static int clave = 6969;
+    static Scanner objleer = new Scanner(System.in);
+
+    public Cajero() {
+        System.out.println("Ingrese su tarjeta");
         System.out.println(".......................");
-        System.out.println("ingrese su contraseña");
-        int contraseña=objleer.nextInt();
+        System.out.println("Ingrese su contrasena");
+        int contraseña = objleer.nextInt();
         procesar(contraseña);
     }
-    
-    public static void procesar(int contraseña){
-        int opcion=0;
+
+    public static void procesar(int contraseña) {
+        int opcion = 0;
         int retirar = 0;
-        int residuo=0;
-        if(contraseña==clave){
-            System.out.println("contraseña correcta");
-            while(opcion==0){
-                System.out.println("desea retirar dinero? 0=si 1=no");
-                opcion=objleer.nextInt();
-                if(opcion==0){
-                    System.out.println("cuanto deseas retirar");
-                    retirar=objleer.nextInt();
-                    if ((retirar>saldo || retirar<1)) {
-                        System.out.println("no cuentas con saldo suficiente");
-                        opcion=0;
-                    }else{
-                        residuo = saldo - retirar;
-                        saldo = residuo;
-                        System.out.println("Saldo después del retiro: " + residuo);
-                        System.out.println("retirando.........");
+
+        if (contraseña == clave) {
+            System.out.println("Contrasena correcta");
+            while (opcion == 0) {
+                System.out.println("Desea retirar dinero? 0=Si 1=No");
+                opcion = objleer.nextInt();
+
+                if (opcion == 0) {
+                    System.out.println("Cuanto deseas retirar?");
+                    retirar = objleer.nextInt();
+
+                    if (retirar > saldo || retirar < 1) {
+                        System.out.println("No cuentas con saldo suficiente o cantidad no valida.");
+                        opcion = 0;
+                    } else {
+                        saldo -= retirar;
+                        System.out.println("Saldo despues del retiro: " + saldo);
+                        System.out.println("Retirando.........");
+                        imprimir(retirar);
                         opcion = 1;
+                        
                     }
-                }else{
-                    opcion=1;
+                } else {
+                    opcion = 1;
                 }
             }
-        }else {
-            System.out.println("contraseña incorrecta");
+        } else {
+            System.out.println("Contrasena incorrecta");
         }
-        imprimir(retirar, saldo);
     }
-    
-    public static void imprimir(int retirar,int saldo){
-        System.out.println("se retiro"+retirar);
-        System.out.println("saldo actual"+saldo);
+
+    public static void imprimir(int retirar) {
+        System.out.println("Se retiro: " + retirar);
+        System.out.println("Saldo actual: " + saldo);
     }
+
 }
