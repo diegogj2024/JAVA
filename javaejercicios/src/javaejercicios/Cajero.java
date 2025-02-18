@@ -21,22 +21,24 @@ public class Cajero {
     public static void procesar(int contraseña){
         int opcion=0;
         int retirar = 0;
+        int residuo=0;
         if(contraseña==clave){
             System.out.println("contraseña correcta");
-            while(opcion>0){
+            while(opcion==0){
                 System.out.println("desea retirar dinero? 0=si 1=no");
                 opcion=objleer.nextInt();
                 if(opcion==0){
                     System.out.println("cuanto deseas retirar");
                     retirar=objleer.nextInt();
-                    if ((retirar>saldo || retirar<=1)) {
+                    if ((retirar>saldo || retirar<1)) {
                         System.out.println("no cuentas con saldo suficiente");
                         opcion=0;
                     }else{
-                        int residuo=saldo-retirar;
-                        saldo=residuo;
+                        residuo = saldo - retirar;
+                        saldo = residuo;
+                        System.out.println("Saldo después del retiro: " + residuo);
                         System.out.println("retirando.........");
-                        opcion=0;
+                        opcion = 1;
                     }
                 }else{
                     opcion=1;

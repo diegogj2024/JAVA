@@ -49,6 +49,7 @@ public class Principal {
                break;
            case 12:
                Cajero objcajero=new Cajero();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }
