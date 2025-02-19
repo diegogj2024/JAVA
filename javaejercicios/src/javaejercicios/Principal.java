@@ -62,6 +62,9 @@ public class Principal {
            case 16:
                Cuentaregresiva objcuenta=new Cuentaregresiva();
                break;
+           case 17:
+               Adivinanza objadivinanza=new Adivinanza();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }
