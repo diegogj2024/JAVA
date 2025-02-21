@@ -65,6 +65,9 @@ public class Principal {
            case 17:
                Adivinanza objadivinanza=new Adivinanza();
                break;
+           case 18:
+               Biblioteca objbiblioteca=new Biblioteca();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }
