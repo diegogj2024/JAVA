@@ -24,16 +24,14 @@ public class Sensor {
         System.out.println("Bienvenido al sensor de temperatura");
         double resultado;
         
-        while (true) {
+        do {
             System.out.println("Por favor ingrese la temperatura actual:");
             resultado = objTeclado.nextDouble();
             
             if (resultado < 18 || resultado > 25) {
                 System.out.println("Alerta: temperatura no adecuada");
-            } else {
-                break;
             }
-        }
+        } while (resultado < 18 || resultado > 25);
         
         mostrarInfo(resultado);
     }
@@ -42,3 +40,4 @@ public class Sensor {
         System.out.println("Temperatura adecuada: " + resultado);
     }
 }
+

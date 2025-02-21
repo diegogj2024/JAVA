@@ -10,7 +10,7 @@ public class Principal {
 
     public static void main(String[] args) {
        Scanner objleer=new Scanner(System.in);
-       System.out.println("ingrese el numero del ejercicio que desee probar rango(1 a 20)");
+       System.out.println("ingrese el numero del ejercicio que desee probar rango(1 a 28)");
        int opcion=objleer.nextInt();
        switch(opcion){
            case 1: 
@@ -73,6 +73,30 @@ public class Principal {
                break;
            case 20:
                Sensor objsensor=new Sensor();
+               break;
+           case 21:
+               Calificaciones objcalificaciones=new Calificaciones();
+               break;
+           case 22:
+               RegistradorTareas objtareas=new RegistradorTareas();
+               break;
+           case 23:
+               Ventas objventas=new Ventas();
+               break;
+           case 24:
+               RegistroVehiculos objvehiculo=new RegistroVehiculos();
+               break;
+           case 25:
+               Tiendavirtual objtiendav=new Tiendavirtual();
+               break;
+           case 26:
+                Agenda objagenda=new Agenda();
+                break;
+           case 27:
+               Listanumeros objlista=new Listanumeros();
+               break;
+           case 28:
+               Tiendafor objtiendafor=new Tiendafor();
                break;
            default:
                System.out.println("esta opcion no existe");

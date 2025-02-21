@@ -27,8 +27,8 @@ public class Menu2 {
     public static int pedirPlatos(Scanner objTeclado) {
         int subtotalPlatos = 0;
         String plato;
-
-        while (true) {
+        
+        do {
             System.out.println("Seleccione un plato (pastas, milanesa, carne asada, sopa, Terminar pedido):");
             plato = objTeclado.nextLine().toLowerCase();
 
@@ -51,14 +51,16 @@ public class Menu2 {
                 default:
                     System.out.println("Error: opcion invalida.");
             }
-        }
+        } while (!plato.equals("terminar pedido"));
+
+        return subtotalPlatos;
     }
 
     public static int pedirBebidas(Scanner objTeclado, int total) {
         int subtotalBebidas = 0;
         String bebida;
-
-        while (true) {
+        
+        do {
             System.out.println("Seleccione una bebida (cocacola, malteada, jugo de fresa, agua, Terminar pedido):");
             bebida = objTeclado.nextLine().toLowerCase();
 
@@ -81,7 +83,9 @@ public class Menu2 {
                 default:
                     System.out.println("Error: opcion invalida.");
             }
-        }
+        } while (!bebida.equals("terminar pedido"));
+
+        return total + subtotalBebidas;
     }
 
     public static void mostrarInfo(int total) {
