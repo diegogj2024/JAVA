@@ -68,6 +68,12 @@ public class Principal {
            case 18:
                Biblioteca objbiblioteca=new Biblioteca();
                break;
+           case 19:
+               Menu2 objmenu2=new Menu2();
+               break;
+           case 20:
+               Sensor objsensor=new Sensor();
+               break;
            default:
                System.out.println("esta opcion no existe");
        }
